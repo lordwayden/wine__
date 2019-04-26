@@ -1,0 +1,25 @@
+## Work with WINE BOTTLE
+
+$ mkdir wine
+$ cd wine
+
+# creatin grunning enviroment Wine Bottle
+$ WINEARCH=win32 ( or $ WINEARCH=win64 ) WINEPREFIX=PATH
+like
+$ WINEARCH=win64 WINEPREFIX= ~/wine/testbottle winetricks 
+
+###
+- select default
+- install a windows dll: -d3dx9; -dotnet35; -dotnet452;
+- install font: -corefonts; -tahoma;
+- run winecfg
+[cancel]
+###
+$ cd testbottle
+$ cd drive_c/
+$ WINEARCH=win64 WINEPREFIX= ~/wine/testbottle wine ~/wine/testbottle/drive_c/testprogram.exe
+###
+to kill wine processes:
+$ wineserver -k
+to force kill
+$ wineserver -k9
